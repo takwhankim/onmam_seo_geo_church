@@ -1125,6 +1125,75 @@
   }
 
   @media (max-width: 640px) {
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+    }
+
+    .nav-shell {
+      min-height: 64px;
+      gap: 8px;
+    }
+
+    .brand {
+      min-width: 0;
+    }
+
+    .brand-logo {
+      height: 18px !important;
+      max-width: min(210px, 54vw);
+    }
+
+    .nav-cta {
+      display: none;
+    }
+
+    .hero {
+      padding: 56px 0 44px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      line-height: 1.16;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-phrase {
+      white-space: normal;
+    }
+
+    .hero p,
+    .section-copy,
+    .small-note,
+    .faq-answer p,
+    .step-card p,
+    .axis-row p,
+    .check-item p,
+    .summary-desc {
+      font-size: 15px;
+      line-height: 1.72;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-actions {
+      width: 100%;
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      min-height: 50px;
+      padding: 13px 18px;
+    }
+
+    .hero-aside {
+      padding: 20px 16px;
+    }
+
     .hero-aside div {
       grid-template-columns: 1fr;
       gap: 6px;
@@ -1132,6 +1201,98 @@
 
     .hero-aside dd {
       text-align: left;
+    }
+
+    .section {
+      padding: 64px 0;
+    }
+
+    .section-header {
+      margin-bottom: 26px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      line-height: 1.18;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    .install-panel {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding: 24px 18px;
+    }
+
+    .install-panel > div:first-child h3 {
+      font-size: 24px;
+      line-height: 1.22;
+    }
+
+    .bookmarklet {
+      width: 100%;
+      min-width: 0;
+      min-height: 58px;
+      padding: 0 20px 0 52px;
+    }
+
+    .bookmarklet::before {
+      left: 22px;
+    }
+
+    .bookmarklet code {
+      font-size: 20px;
+      white-space: normal;
+      text-align: center;
+    }
+
+    .step-card {
+      grid-template-columns: 40px minmax(0, 1fr);
+      gap: 14px;
+      padding: 18px 0;
+    }
+
+    .step-index {
+      width: 36px;
+      height: 36px;
+    }
+
+    .axis-row {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 26px 0;
+    }
+
+    .axis-key {
+      font-size: 30px;
+    }
+
+    .check-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .check-item {
+      padding: 24px 0;
+      border-right: 0;
+    }
+
+    .check-number {
+      margin-bottom: 24px;
+    }
+
+    .faq-question {
+      padding: 20px 18px;
+      align-items: flex-start;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .faq-answer p {
+      padding: 0 18px 20px;
+    }
+
+    .footer-shell {
+      font-size: 13.5px;
     }
   }
 </style>
