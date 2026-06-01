@@ -20,7 +20,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -45,7 +44,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: "Pretendard", "Manrope", sans-serif;
+    font-family: "Manrope";
     background:
       radial-gradient(circle at top, rgba(91,91,246,0.16), transparent 26%),
       linear-gradient(180deg, #0b0b10 0%, #0d0d14 46%, #09090f 100%);
@@ -66,6 +65,13 @@
   }
 
   a { color: inherit; text-decoration: none; }
+
+  button,
+  input,
+  textarea,
+  select {
+    font-family: "Manrope";
+  }
 
   .container {
     width: min(calc(100% - 32px), var(--max));
@@ -93,7 +99,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    font-family: "Manrope", sans-serif;
+    font-family: "Manrope";
     font-weight: 800;
     letter-spacing: -0.03em;
   }
@@ -181,7 +187,7 @@
   }
 
   .hero h1 {
-    font-family: "Manrope", sans-serif;
+    font-family: "Manrope";
     font-size: clamp(3rem, 6.7vw, 5.5rem);
     line-height: 1.02;
     letter-spacing: -0.06em;
@@ -260,7 +266,7 @@
   }
 
   .section-title {
-    font-family: "Manrope", sans-serif;
+    font-family: "Manrope";
     font-size: clamp(2.1rem, 4vw, 3.8rem);
     line-height: 1.05;
     letter-spacing: -0.04em;
@@ -416,7 +422,7 @@
     color: #9599ff;
     display: grid;
     place-items: center;
-    font-family: "Manrope", sans-serif;
+    font-family: "Manrope";
     font-weight: 800;
   }
 
@@ -894,7 +900,7 @@
 
   .axis-key {
     color: var(--brand);
-    font-family: "Manrope", sans-serif;
+    font-family: "Manrope";
     font-size: clamp(1.6rem, 3vw, 2.8rem);
     font-weight: 800;
     line-height: 1;
@@ -928,7 +934,7 @@
   .check-number {
     display: block;
     color: var(--brand);
-    font-family: "Manrope", sans-serif;
+    font-family: "Manrope";
     font-weight: 800;
     margin-bottom: 40px;
   }
@@ -1015,6 +1021,73 @@
       width: 100%;
       min-width: 0;
     }
+  }
+
+  html,
+  body,
+  body * {
+    font-family: "Manrope";
+  }
+
+  body,
+  p,
+  li,
+  dt,
+  dd,
+  a,
+  button,
+  .section-copy,
+  .hero p,
+  .small-note,
+  .faq-answer p,
+  .step-card p,
+  .axis-row p,
+  .check-item p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+    font-weight: 500;
+    line-height: 1.18;
+  }
+
+  .section-title {
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.14;
+  }
+
+  .install-panel > div:first-child h3 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.18;
+  }
+
+  .card h3,
+  .score-card h3,
+  .step-card h3,
+  .axis-row h3,
+  .check-item h3,
+  .hero-aside strong,
+  .bookmarklet code,
+  .axis-key {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  .eyebrow,
+  .section-kicker,
+  .install-pill,
+  .hero-meta,
+  .check-number,
+  .footer-shell,
+  .nav-links,
+  .brand-text {
+    font-size: 13.5px;
+    font-weight: 400;
   }
 </style>
 </head>
