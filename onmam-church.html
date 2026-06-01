@@ -601,7 +601,7 @@
 
   .hero {
     min-height: auto;
-    padding: 96px 0 82px;
+    padding: 96px 0 76px;
     display: block;
     text-align: left;
   }
@@ -613,9 +613,9 @@
 
   .hero-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.55fr);
-    gap: 64px;
-    align-items: end;
+    grid-template-columns: 1fr;
+    gap: 42px;
+    align-items: start;
   }
 
   .eyebrow,
@@ -636,11 +636,18 @@
 
   .hero h1 {
     color: var(--navy);
-    font-size: clamp(3rem, 7vw, 6.1rem);
-    line-height: 0.98;
+    font-size: clamp(2.7rem, 5.15vw, 4.85rem);
+    line-height: 1.04;
     letter-spacing: 0;
     margin-bottom: 28px;
-    max-width: 920px;
+    max-width: 1260px;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .hero-phrase {
+    display: inline-block;
+    white-space: nowrap;
   }
 
   .hero p {
@@ -648,7 +655,7 @@
     color: var(--muted);
     font-size: clamp(1.05rem, 1.6vw, 1.24rem);
     line-height: 1.82;
-    max-width: 760px;
+    max-width: 960px;
   }
 
   .hero-meta {
@@ -689,6 +696,7 @@
     border-radius: 8px;
     padding: 28px;
     box-shadow: var(--shadow);
+    max-width: 840px;
   }
 
   .hero-aside strong {
@@ -1030,7 +1038,7 @@
     <div class="container hero-layout reveal visible">
       <div>
         <div class="eyebrow">온맘 교회 디지털 선교 분석</div>
-        <h1>우리교회 홈페이지, 검색과 AI가 제대로 읽고 있을까요?</h1>
+        <h1>우리교회 홈페이지, 검색과 AI가 <span class="hero-phrase">제대로 읽고 있을까요?</span></h1>
         <p>온맘 디지털선교 분석기는 교회 홈페이지를 열어둔 상태에서 북마클릿을 한 번 클릭하면 검색 노출, AI 인용 가능성, 질문형 답변 구조, 웹 접근성을 교회 맞춤 기준으로 즉시 점검합니다.</p>
         <div class="hero-meta">
           <span>SEO · GEO · AEO · A11y를 한 번에 보는 교회 홈페이지 진단 북마클릿</span>
