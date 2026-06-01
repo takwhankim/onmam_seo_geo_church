@@ -718,9 +718,10 @@
   }
 
   .hero-aside div {
-    display: flex;
-    justify-content: space-between;
-    gap: 18px;
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 140px;
+    gap: 20px;
+    align-items: center;
     padding-bottom: 14px;
     border-bottom: 1px solid var(--line);
   }
@@ -734,9 +735,15 @@
     color: var(--muted);
   }
 
+  .summary-desc {
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
   .hero-aside dd {
     color: var(--brand);
     font-weight: 800;
+    text-align: right;
   }
 
   .section {
@@ -1116,6 +1123,17 @@
     height: 26px;
     background-size: 9px 9px;
   }
+
+  @media (max-width: 640px) {
+    .hero-aside div {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    .hero-aside dd {
+      text-align: left;
+    }
+  }
 </style>
 </head>
 <body>
@@ -1154,18 +1172,22 @@
         <dl>
           <div>
             <dt>Search</dt>
+            <span class="summary-desc">교회명, 지역, 예배시간이 검색 결과에 잘 드러나는지 봅니다.</span>
             <dd>검색 노출</dd>
           </div>
           <div>
             <dt>AI</dt>
+            <span class="summary-desc">생성형 AI가 교회 정보를 이해하고 답변에 인용하기 쉬운지 확인합니다.</span>
             <dd>인용 가능성</dd>
           </div>
           <div>
             <dt>Answer</dt>
+            <span class="summary-desc">방문자가 묻는 질문에 바로 답할 수 있는 구조인지 점검합니다.</span>
             <dd>질문형 구조</dd>
           </div>
           <div>
             <dt>Access</dt>
+            <span class="summary-desc">처음 방문자와 고령층도 정보를 쉽게 읽고 이동할 수 있는지 살핍니다.</span>
             <dd>웹 접근성</dd>
           </div>
         </dl>
