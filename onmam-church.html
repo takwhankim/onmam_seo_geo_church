@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>온맘 디지털선교 분석기</title>
-<meta name="description" content="교회 홈페이지를 SEO, GEO, AEO, 접근성 관점에서 진단하는 온맘닷컴 디지털 선교 분석기입니다.">
+<title>온맘 교회 디지털 선교 분석</title>
+<meta name="description" content="온맘 교회 디지털 선교 분석 북마클릿은 교회 홈페이지의 검색 노출, AI 인용 가능성, 질문형 답변 구조, 웹 접근성을 즉시 점검합니다.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="온맘 디지털선교 분석기">
-<meta property="og:description" content="교회 홈페이지를 SEO, GEO, AEO, 접근성 관점에서 진단하는 온맘닷컴 디지털 선교 분석기입니다.">
+<meta property="og:title" content="온맘 교회 디지털 선교 분석">
+<meta property="og:description" content="교회 홈페이지의 검색 노출, AI 인용 가능성, 질문형 답변 구조, 웹 접근성을 교회 맞춤 기준으로 즉시 점검합니다.">
 <meta property="og:url" content="https://onmamseogeochurch.vercel.app/">
 <meta property="og:image" content="https://onmamseogeochurch.vercel.app/thum.png">
 <meta property="og:image:width" content="1076">
 <meta property="og:image:height" content="457">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="온맘 디지털선교 분석기">
-<meta name="twitter:description" content="교회 홈페이지를 SEO, GEO, AEO, 접근성 관점에서 진단하는 온맘닷컴 디지털 선교 분석기입니다.">
+<meta name="twitter:title" content="온맘 교회 디지털 선교 분석">
+<meta name="twitter:description" content="교회 홈페이지의 검색 노출, AI 인용 가능성, 질문형 답변 구조, 웹 접근성을 교회 맞춤 기준으로 즉시 점검합니다.">
 <meta name="twitter:image" content="https://onmamseogeochurch.vercel.app/thum.png">
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -542,6 +542,461 @@
     .step-card,
     .score-card { padding: 24px 20px; }
   }
+
+  :root {
+    --bg: #f7f4ee;
+    --paper: #fffdf8;
+    --paper-strong: #ffffff;
+    --ink: #1f2833;
+    --muted: #66717f;
+    --subtle: #8b95a1;
+    --line: #ded7cd;
+    --brand: #c65f46;
+    --brand-soft: #e07b61;
+    --brand-ink: #7b3325;
+    --navy: #182431;
+    --max: 1120px;
+    --radius: 8px;
+    --shadow: 0 22px 60px rgba(31, 40, 51, 0.09);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+  }
+
+  body::before {
+    display: none;
+  }
+
+  .site-header {
+    background: rgba(24,36,49,0.96);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    color: #fffdf8;
+  }
+
+  .nav-shell {
+    min-height: 76px;
+  }
+
+  .brand-logo {
+    height: 23px !important;
+    filter: none;
+  }
+
+  .nav-links {
+    color: rgba(255,255,255,0.72);
+  }
+
+  .nav-links a:hover {
+    color: #fffdf8;
+  }
+
+  .nav-cta {
+    border-color: var(--brand-soft);
+    background: var(--brand);
+    color: #fffdf8;
+    border-radius: 999px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 96px 0 82px;
+    display: block;
+    text-align: left;
+  }
+
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+
+  .hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.55fr);
+    gap: 64px;
+    align-items: end;
+  }
+
+  .eyebrow,
+  .section-kicker,
+  .install-pill {
+    display: inline-flex;
+    width: fit-content;
+    border: 1px solid rgba(198,95,70,0.28);
+    background: rgba(198,95,70,0.08);
+    color: var(--brand-ink);
+    border-radius: 999px;
+    padding: 8px 13px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    color: var(--navy);
+    font-size: clamp(3rem, 7vw, 6.1rem);
+    line-height: 0.98;
+    letter-spacing: 0;
+    margin-bottom: 28px;
+    max-width: 920px;
+  }
+
+  .hero p {
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(1.05rem, 1.6vw, 1.24rem);
+    line-height: 1.82;
+    max-width: 760px;
+  }
+
+  .hero-meta {
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 26px;
+    color: var(--brand-ink);
+    font-weight: 800;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+    margin-top: 38px;
+  }
+
+  .btn {
+    min-width: 168px;
+    border-radius: 999px;
+    padding: 15px 22px;
+    color: var(--ink);
+  }
+
+  .btn-primary {
+    background: var(--brand);
+    color: #fffdf8;
+    box-shadow: 0 18px 44px rgba(198,95,70,0.25);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border-color: var(--line);
+    color: var(--ink);
+  }
+
+  .hero-aside {
+    border: 1px solid var(--line);
+    background: var(--paper);
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+  }
+
+  .hero-aside strong {
+    display: block;
+    color: var(--navy);
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+  }
+
+  .hero-aside dl {
+    display: grid;
+    gap: 16px;
+  }
+
+  .hero-aside div {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero-aside div:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .hero-aside dt {
+    color: var(--muted);
+  }
+
+  .hero-aside dd {
+    color: var(--brand);
+    font-weight: 800;
+  }
+
+  .section {
+    padding: 104px 0;
+  }
+
+  .section-soft,
+  .section-dark {
+    background: transparent;
+  }
+
+  .section-header {
+    text-align: left;
+    margin-bottom: 42px;
+    display: grid;
+    grid-template-columns: minmax(220px, 0.38fr) minmax(0, 1fr);
+    gap: 54px;
+    align-items: start;
+  }
+
+  .section-title {
+    color: var(--navy);
+    font-size: clamp(2.2rem, 4.6vw, 4.15rem);
+    line-height: 1.02;
+    letter-spacing: 0;
+    margin-bottom: 18px;
+  }
+
+  .section-copy {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.85;
+  }
+
+  .install-panel,
+  .faq-item {
+    border: 1px solid var(--line);
+    background: var(--paper);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+
+  .install-panel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 0.86fr) minmax(320px, 0.74fr);
+    gap: 44px;
+    text-align: left;
+    padding: 38px;
+    margin-bottom: 28px;
+  }
+
+  .install-pill {
+    position: static;
+  }
+
+  .install-panel h3 {
+    color: var(--navy);
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    line-height: 1.08;
+    margin-bottom: 16px;
+  }
+
+  .bookmarklet {
+    position: relative;
+    display: inline-flex;
+    min-height: 78px;
+    min-width: min(100%, 420px);
+    margin: 8px 0 18px;
+    padding: 0 30px 0 70px;
+    border-radius: 999px;
+    background: var(--brand);
+    color: #fffdf8;
+    box-shadow: 0 22px 48px rgba(198,95,70,0.28);
+    cursor: grab;
+  }
+
+  .bookmarklet::before {
+    content: "";
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    width: 20px;
+    height: 30px;
+    transform: translateY(-50%);
+    background-image: radial-gradient(circle, rgba(255,255,255,0.92) 2px, transparent 3px);
+    background-size: 10px 10px;
+  }
+
+  .bookmarklet code {
+    font-size: 1.06rem;
+    letter-spacing: 0;
+  }
+
+  .small-note {
+    color: var(--muted);
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .step-card {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 18px;
+    align-items: start;
+    text-align: left;
+    padding: 20px 0;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .step-card:last-child {
+    border-bottom: 0;
+  }
+
+  .step-index {
+    width: 42px;
+    height: 42px;
+    border-color: var(--brand);
+    color: var(--brand);
+  }
+
+  .step-card h3,
+  .axis-row h3,
+  .check-item h3 {
+    color: var(--navy);
+    letter-spacing: 0;
+  }
+
+  .step-card p,
+  .axis-row p,
+  .check-item p {
+    color: var(--muted);
+    line-height: 1.78;
+  }
+
+  .axis-table {
+    border-top: 1px solid var(--navy);
+  }
+
+  .axis-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 42px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .axis-key {
+    color: var(--brand);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .axis-row h3 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+  }
+
+  .check-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid var(--navy);
+  }
+
+  .check-item {
+    padding: 28px 28px 32px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .check-item:last-child {
+    border-right: 0;
+  }
+
+  .check-number {
+    display: block;
+    color: var(--brand);
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    margin-bottom: 40px;
+  }
+
+  .faq-list {
+    max-width: none;
+  }
+
+  .faq-item {
+    box-shadow: none;
+  }
+
+  .faq-question {
+    color: var(--navy);
+    padding: 24px 28px;
+  }
+
+  .faq-answer p {
+    color: var(--muted);
+  }
+
+  .floating-cta {
+    border-radius: 999px;
+    background: var(--brand);
+    color: #fffdf8;
+    box-shadow: 0 18px 42px rgba(198,95,70,0.26);
+  }
+
+  .site-footer {
+    background: var(--navy);
+    border-top: 0;
+  }
+
+  .footer-shell {
+    color: rgba(255,255,255,0.72);
+  }
+
+  .footer-shell a {
+    color: #fffdf8;
+    font-weight: 700;
+  }
+
+  @media (max-width: 980px) {
+    .hero-layout,
+    .install-panel,
+    .section-header {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .section {
+      padding: 76px 0;
+    }
+
+    .check-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .check-item {
+      border-right: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding: 68px 0 54px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.45rem, 12vw, 3.4rem);
+    }
+
+    .axis-row {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 26px 0;
+    }
+
+    .install-panel {
+      padding: 26px 20px;
+    }
+
+    .bookmarklet {
+      width: 100%;
+      min-width: 0;
+    }
+  }
 </style>
 </head>
 <body>
@@ -551,9 +1006,9 @@
       <img class="brand-logo" src="bi.png" alt="온맘 디지털선교 분석기">
     </a>
     <ul class="nav-links">
-      <li><a href="#features">기능</a></li>
       <li><a href="#install">설치</a></li>
       <li><a href="#scores">점검축</a></li>
+      <li><a href="#church-checks">교회 체크</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
     <a class="nav-cta" href="#install">1초 설치하기</a>
@@ -562,101 +1017,88 @@
 
 <main id="top">
   <section class="hero">
-    <div class="container reveal visible">
-      <div class="eyebrow">북마클릿 기반 · 교회 웹사이트 진단 · 무료 MVP</div>
-      <h1>우리교회 SEO · GEO · AEO · A11y,<br>한 번에 점검</h1>
-      <p>온맘 디지털선교 분석기는 교회 홈페이지를 열어둔 상태에서 북마클릿 한 번만 클릭하면, 검색 노출부터 AI 인용 가능성, 답변형 구조, 웹 접근성까지 교회 맞춤 기준으로 즉시 진단합니다.</p>
-      <div class="hero-meta">
-        <span>Created for <strong>Church Digital Mission</strong></span>
-        <span>@</span>
-        <span>Bookmarklet Service</span>
-      </div>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#install">1초 설치하기</a>
-        <a class="btn btn-secondary" href="#faq">사용 방법 보기</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="features" class="section section-soft">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-kicker">핵심 요약</p>
-        <h2 class="section-title">교회 사이트를 위한<br>현장형 진단 도구</h2>
-        <p class="section-copy">원본 서비스의 구조를 그대로 가져오되, 진단 기준은 전부 교회 디지털선교 상황에 맞게 바꿨습니다. 교회 담당자나 제작사가 지금 열려 있는 페이지를 바로 점검할 수 있게 북마클릿으로 제공합니다.</p>
-      </div>
-      <div class="card-grid">
-        <article class="card reveal">
-          <span class="card-icon">01</span>
-          <h3>1초 설치 & 실행</h3>
-          <p>복잡한 가입이나 서버 설정 없이 북마클릿을 북마크 바에 드래그해 두고, 점검할 교회 홈페이지에서 클릭만 하면 바로 실행됩니다.</p>
-          <ul>
-            <li>드래그 앤 드롭 설치</li>
-            <li>브라우저에서 즉시 실행</li>
-            <li>운영자와 제작사 모두 사용 가능</li>
-          </ul>
-        </article>
-        <article class="card reveal">
-          <span class="card-icon">02</span>
-          <h3>4가지 축 통합 점검</h3>
-          <p>SEO, GEO, AEO, A11y를 한 번에 진단합니다. 단순한 웹 품질 검사보다, 교회 정보 전달과 디지털선교 성과에 가까운 체크를 우선합니다.</p>
-          <ul>
-            <li>예배시간·오시는 길 노출성</li>
-            <li>AI가 읽기 좋은 구조</li>
-            <li>새가족 안내 흐름 점검</li>
-          </ul>
-        </article>
-        <article class="card reveal">
-          <span class="card-icon">03</span>
-          <h3>교회 특화 체크포인트</h3>
-          <p>메타 태그나 헤딩만 보는 게 아니라, 교회 사이트에 꼭 필요한 핵심 정보가 실제로 잘 전달되는지까지 같이 봅니다.</p>
-          <ul>
-            <li>예배/설교/사역/문의 정보</li>
-            <li>모바일 가독성과 접근성</li>
-            <li>개선 우선순위 제안</li>
-          </ul>
-        </article>
-      </div>
-      <div class="highlight-box reveal">
-        <h3>TL;DR</h3>
-        <p>온맘 디지털선교 분석기는 교회 홈페이지를 위한 북마클릿입니다. SEO · GEO · AEO · A11y를 교회 맥락에 맞게 한 번에 진단하고, 무엇을 먼저 고쳐야 하는지 바로 보여줍니다.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="install" class="section section-dark">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-kicker">1초 설치</p>
-        <h2 class="section-title">북마클릿으로 바로 배포</h2>
-        <p class="section-copy">이 서비스는 앱 설치형이 아니라 북마클릿으로 제공됩니다. 교회 홈페이지를 열고 북마크를 누르는 것만으로 분석 패널이 실행되는 사용 흐름을 기준으로 랜딩을 구성했습니다.</p>
-      </div>
-      <div class="install-panel reveal">
-        <span class="install-pill">북마클릿</span>
-        <h3>아래 버튼을 북마크 바로 드래그하세요</h3>
-        <a class="bookmarklet" id="bookmarklet-link" href="#"><code>온맘 디지털선교 분석기</code></a>
-        <p class="small-note">클릭하지 말고 드래그해서 북마크 바에 놓으세요. 이제 외부 파일을 다시 불러오지 않고, 북마클릿 안에 실행 코드가 직접 들어갑니다.</p>
-        <div class="hero-actions" style="margin-top:18px">
-          <button class="btn btn-secondary" id="run-demo-button" type="button">이 페이지에서 데모 실행</button>
-          <button class="btn btn-secondary" id="copy-bookmarklet-button" type="button">북마클릿 코드 복사</button>
+    <div class="container hero-layout reveal visible">
+      <div>
+        <div class="eyebrow">온맘 교회 디지털 선교 분석</div>
+        <h1>우리교회 홈페이지, 검색과 AI가 제대로 읽고 있을까요?</h1>
+        <p>온맘 디지털선교 분석기는 교회 홈페이지를 열어둔 상태에서 북마클릿을 한 번 클릭하면 검색 노출, AI 인용 가능성, 질문형 답변 구조, 웹 접근성을 교회 맞춤 기준으로 즉시 점검합니다.</p>
+        <div class="hero-meta">
+          <span>SEO · GEO · AEO · A11y를 한 번에 보는 교회 홈페이지 진단 북마클릿</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#install">1초 설치하기</a>
+          <a class="btn btn-secondary" href="#faq">사용 방법 보기</a>
         </div>
       </div>
-      <div class="steps-grid">
-        <article class="step-card reveal">
-          <div class="step-index">1</div>
-          <h3>북마크 바 표시</h3>
-          <p>Chrome 기준 `Cmd+Shift+B` 또는 `Ctrl+Shift+B`로 북마크 바를 먼저 표시합니다.</p>
-        </article>
-        <article class="step-card reveal">
-          <div class="step-index">2</div>
-          <h3>버튼 드래그</h3>
-          <p>위 북마클릿 버튼을 북마크 바로 끌어다 놓으면 설치가 끝납니다.</p>
-        </article>
-        <article class="step-card reveal">
-          <div class="step-index">3</div>
-          <h3>교회 사이트에서 실행</h3>
-          <p>진단하려는 교회 홈페이지를 연 뒤 북마클릿을 클릭하면 분석 패널이 뜹니다.</p>
-        </article>
+      <aside class="hero-aside" aria-label="진단 요약">
+        <strong>한 번의 클릭으로 확인하는 항목</strong>
+        <dl>
+          <div>
+            <dt>Search</dt>
+            <dd>검색 노출</dd>
+          </div>
+          <div>
+            <dt>AI</dt>
+            <dd>인용 가능성</dd>
+          </div>
+          <div>
+            <dt>Answer</dt>
+            <dd>질문형 구조</dd>
+          </div>
+          <div>
+            <dt>Access</dt>
+            <dd>웹 접근성</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section id="install" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <p class="section-kicker">설치 영역</p>
+        </div>
+        <div>
+          <h2 class="section-title">클릭이 아니라 드래그해서 설치합니다</h2>
+          <p class="section-copy">아래 북마클릿 버튼을 북마크 바로 드래그하세요. 앱을 설치하거나 계정을 연결하지 않아도, 진단할 교회 홈페이지에서 북마클릿을 클릭하는 순간 분석 패널이 실행됩니다.</p>
+        </div>
+      </div>
+      <div class="install-panel reveal">
+        <div>
+          <span class="install-pill">북마클릿</span>
+          <h3>아래 버튼을 북마크 바로 드래그하세요</h3>
+          <a class="bookmarklet" id="bookmarklet-link" href="#"><code>온맘 디지털선교 분석기</code></a>
+          <p class="small-note">클릭하지 말고 드래그해서 북마크 바에 놓으세요. 북마크에 저장한 뒤에는 진단할 교회 홈페이지에서 그 북마클릿을 클릭하면 됩니다.</p>
+          <div class="hero-actions" style="margin-top:22px">
+            <button class="btn btn-secondary" id="run-demo-button" type="button">이 페이지에서 데모 실행</button>
+            <button class="btn btn-secondary" id="copy-bookmarklet-button" type="button">북마클릿 코드 복사</button>
+          </div>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <div class="step-index">①</div>
+            <div>
+              <h3>북마크 바 표시</h3>
+              <p>Chrome 기준 Cmd+Shift+B 또는 Ctrl+Shift+B로 북마크 바 표시</p>
+            </div>
+          </article>
+          <article class="step-card reveal">
+            <div class="step-index">②</div>
+            <div>
+              <h3>버튼 드래그</h3>
+              <p>버튼을 북마크 바로 드래그</p>
+            </div>
+          </article>
+          <article class="step-card reveal">
+            <div class="step-index">③</div>
+            <div>
+              <h3>교회 홈페이지에서 실행</h3>
+              <p>진단할 교회 홈페이지에서 북마클릿 클릭</p>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -664,88 +1106,88 @@
   <section id="scores" class="section">
     <div class="container">
       <div class="section-header reveal">
-        <p class="section-kicker">점검 축</p>
-        <h2 class="section-title">SEO · GEO · AEO · A11y를<br>교회 맥락으로 재해석</h2>
-        <p class="section-copy">원본 서비스처럼 4축 진단을 유지하되, “우리교회 정보가 검색과 AI와 방문자에게 제대로 전달되는가”에 초점을 맞췄습니다.</p>
+        <div>
+          <p class="section-kicker">4가지 점검 축</p>
+        </div>
+        <div>
+          <h2 class="section-title">교회 홈페이지를 읽는 네 가지 기준</h2>
+          <p class="section-copy">검색엔진, 생성형 AI, 질문형 탐색, 접근성 기준을 한 화면에서 비교할 수 있도록 가로로 흐르는 구조로 정리했습니다.</p>
+        </div>
       </div>
-      <div class="score-grid">
-        <article class="score-card reveal">
-          <span class="score-icon">SEO</span>
-          <h3>SEO</h3>
-          <p>교회명, 지역명, 예배시간, 설교, 오시는 길, 새가족 안내가 검색엔진에 충분히 노출될 수 있는 구조인지 진단합니다.</p>
-          <ul>
-            <li>타이틀/메타 설명</li>
-            <li>교회 핵심 정보 텍스트화</li>
-            <li>모바일 검색 가독성</li>
-          </ul>
+      <div class="axis-table">
+        <article class="axis-row reveal">
+          <span class="axis-key">SEO</span>
+          <div>
+            <h3>검색 노출 구조</h3>
+            <p>교회명, 지역, 예배시간, 설교, 오시는 길, 새가족 안내가 검색엔진에 충분히 노출되는 구조인지 진단</p>
+          </div>
         </article>
-        <article class="score-card reveal">
-          <span class="score-icon">GEO</span>
-          <h3>GEO</h3>
-          <p>ChatGPT, Perplexity, Claude 같은 생성형 AI가 교회 정보를 이해하고 인용하기 좋은 구조인지 확인합니다.</p>
-          <ul>
-            <li>명확한 교회 소개 문장</li>
-            <li>사역/예배/위치 정보 구조화</li>
-            <li>신뢰 신호와 운영 주체 표기</li>
-          </ul>
+        <article class="axis-row reveal">
+          <span class="axis-key">GEO</span>
+          <div>
+            <h3>생성형 AI 인용 구조</h3>
+            <p>ChatGPT, Perplexity, Claude 같은 생성형 AI가 교회 정보를 이해하고 인용하기 좋은 구조인지 확인</p>
+          </div>
         </article>
-        <article class="score-card reveal">
-          <span class="score-icon">AEO</span>
-          <h3>AEO</h3>
-          <p>“이 교회 예배시간은?”, “주차 가능한가?”, “어린이 예배가 있나?” 같은 질문형 탐색에 답하기 좋은지 점검합니다.</p>
-          <ul>
-            <li>FAQ 구조</li>
-            <li>질문-답변형 문장</li>
-            <li>핵심 정보의 즉답 가능성</li>
-          </ul>
+        <article class="axis-row reveal">
+          <span class="axis-key">AEO</span>
+          <div>
+            <h3>질문형 답변 구조</h3>
+            <p>"예배시간은?", "주차 가능한가?", "어린이 예배가 있나?" 같은 질문형 탐색에 답하기 좋은지 점검</p>
+          </div>
         </article>
-        <article class="score-card reveal">
-          <span class="score-icon">A11y</span>
-          <h3>A11y</h3>
-          <p>고령층과 처음 방문하는 사람까지 포함해 누구나 교회 정보를 쉽게 읽고 이동할 수 있는지 확인합니다.</p>
-          <ul>
-            <li>대비와 글자 크기</li>
-            <li>버튼/링크 접근성</li>
-            <li>이미지 대체텍스트와 구조</li>
-          </ul>
+        <article class="axis-row reveal">
+          <span class="axis-key">A11y</span>
+          <div>
+            <h3>웹 접근성</h3>
+            <p>고령층과 첫 방문자까지 누구나 교회 정보를 쉽게 읽고 이동할 수 있는지 확인</p>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section section-soft">
+  <section id="church-checks" class="section section-soft">
     <div class="container">
       <div class="section-header reveal">
-        <p class="section-kicker">교회 특화 체크 항목</p>
-        <h2 class="section-title">실제로 이런 것들을 봅니다</h2>
-        <p class="section-copy">기술 점수만 내는 도구가 아니라, 교회 홈페이지가 선교와 안내의 역할을 제대로 하고 있는지 보는 항목들입니다.</p>
+        <div>
+          <p class="section-kicker">교회 특화 체크 항목</p>
+        </div>
+        <div>
+          <h2 class="section-title">첫 방문자가 실제로 필요한 정보를 봅니다</h2>
+          <p class="section-copy">기술 점수만 보는 도구가 아니라, 교회 홈페이지가 안내와 선교의 역할을 잘 수행하는지 확인합니다.</p>
+        </div>
       </div>
-      <div class="resource-grid">
-        <article class="card reveal">
-          <span class="card-icon">01</span>
+      <div class="check-grid">
+        <article class="check-item reveal">
+          <span class="check-number">01</span>
           <h3>기본 교회 정보</h3>
-          <p>교회명, 주소, 전화번호, 예배시간, 주차, 대중교통, 새가족 안내가 첫 화면이나 주요 메뉴에서 쉽게 보이는지 점검합니다.</p>
+          <p>교회명·주소·전화·예배시간·주차·새가족 안내가 첫 화면에서 쉽게 보이는지</p>
         </article>
-        <article class="card reveal">
-          <span class="card-icon">02</span>
+        <article class="check-item reveal">
+          <span class="check-number">02</span>
           <h3>설교와 사역 콘텐츠</h3>
-          <p>최근 설교, 부서 소개, 선교 소식, 행사 공지가 검색과 AI가 읽을 수 있는 실제 텍스트로 구성되어 있는지 봅니다.</p>
+          <p>최근 설교, 부서 소개, 선교 소식이 검색과 AI가 읽을 수 있는 텍스트로 구성됐는지</p>
         </article>
-        <article class="card reveal">
-          <span class="card-icon">03</span>
+        <article class="check-item reveal">
+          <span class="check-number">03</span>
           <h3>새가족 동선</h3>
-          <p>처음 방문하는 사람이 “언제, 어디로, 어떻게 가면 되는지” 바로 이해할 수 있는 흐름이 있는지 진단합니다.</p>
+          <p>처음 방문하는 사람이 "언제, 어디로, 어떻게 가면 되는지" 바로 이해할 수 있는지</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="faq" class="section section-dark">
+  <section id="faq" class="section">
     <div class="container">
       <div class="section-header reveal">
-        <p class="section-kicker">FAQ</p>
-        <h2 class="section-title">북마클릿 서비스로 운영할 때 자주 나오는 질문</h2>
-        <p class="section-copy">배포 방식이 북마클릿이기 때문에, 설치와 실행 방식에 대한 설명을 FAQ로 같이 풀었습니다.</p>
+        <div>
+          <p class="section-kicker">FAQ</p>
+        </div>
+        <div>
+          <h2 class="section-title">북마클릿 사용 전에 자주 묻는 질문</h2>
+          <p class="section-copy">설치와 실행, 결과 화면, 교회 맞춤 확장 가능성을 간단히 정리했습니다.</p>
+        </div>
       </div>
       <div class="faq-list">
         <article class="faq-item reveal open">
@@ -754,7 +1196,7 @@
             <span>+</span>
           </button>
           <div class="faq-answer">
-            <p>교회 실무자나 제작사가 별도 프로그램 설치 없이 지금 보고 있는 홈페이지를 바로 진단할 수 있기 때문입니다. 배포와 업데이트도 스크립트 교체로 간단하게 관리할 수 있습니다.</p>
+            <p>교회 담당자와 제작사가 별도 앱 설치 없이 현재 열려 있는 홈페이지에서 바로 진단할 수 있기 때문입니다.</p>
           </div>
         </article>
         <article class="faq-item reveal">
@@ -763,25 +1205,25 @@
             <span>+</span>
           </button>
           <div class="faq-answer">
-            <p>교회 메인 홈페이지, 예배안내 페이지, 설교 페이지, 새가족 등록 페이지 등 실제 진단이 필요한 어떤 페이지에서도 실행할 수 있습니다.</p>
+            <p>교회 메인, 예배 안내, 설교, 새가족, 오시는 길처럼 검색과 방문자 안내에 중요한 페이지에서 실행하면 좋습니다.</p>
           </div>
         </article>
         <article class="faq-item reveal">
           <button class="faq-question" type="button">
-            <span>결과는 어떻게 보여주면 좋을까요?</span>
+            <span>결과는 어떻게 보이나요?</span>
             <span>+</span>
           </button>
           <div class="faq-answer">
-            <p>우측 슬라이드 패널이나 모달 형태로 점수, 체크리스트, 우선 수정 항목, 캡처/복사 기능을 보여주는 방식이 가장 자연스럽습니다.</p>
+            <p>현재 페이지 위에 진단 패널이 열리고, SEO · GEO · AEO · A11y 점수와 개선 항목을 한 번에 보여줍니다.</p>
           </div>
         </article>
         <article class="faq-item reveal">
           <button class="faq-question" type="button">
-            <span>교회 맞춤 항목은 더 늘릴 수 있나요?</span>
+            <span>교회 맞춤 항목을 더 늘릴 수 있나요?</span>
             <span>+</span>
           </button>
           <div class="faq-answer">
-            <p>물론입니다. 예배시간, 헌금안내, 온라인예배, 교회학교, 목회자 소개, 카카오톡 문의, 지도 연결처럼 실제 운영 흐름에 맞춘 규칙을 계속 추가할 수 있습니다.</p>
+            <p>가능합니다. 예배, 설교, 새가족, 교회학교, 온라인예배, 문의 동선처럼 교회 운영 흐름에 맞춘 항목을 확장할 수 있습니다.</p>
           </div>
         </article>
       </div>
@@ -789,14 +1231,10 @@
   </section>
 </main>
 
-<a class="floating-cta" href="#install">북마클릿 설치하기</a>
-
 <footer class="site-footer">
   <div class="container footer-shell">
-    <div class="brand">
-      <img class="brand-logo" src="bi.png" alt="온맘 디지털선교 분석기">
-    </div>
     <p>© 2026 Onmam Digital Mission Analyzer</p>
+    <a href="https://onmam.com" target="_blank" rel="noopener">onmam.com</a>
   </div>
 </footer>
 
