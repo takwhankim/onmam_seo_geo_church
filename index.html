@@ -544,17 +544,17 @@
   }
 
   :root {
-    --bg: #f5f8fc;
-    --paper: #ffffff;
+    --bg: #f7f4ee;
+    --paper: #fffdf8;
     --paper-strong: #ffffff;
     --ink: #1f2833;
     --muted: #66717f;
     --subtle: #8b95a1;
-    --line: #d7e1ee;
-    --brand: #2563eb;
-    --brand-soft: #60a5fa;
-    --brand-ink: #1d4ed8;
-    --navy: #132238;
+    --line: #ded7cd;
+    --brand: #c65f46;
+    --brand-soft: #e07b61;
+    --brand-ink: #7b3325;
+    --navy: #182431;
     --max: 1120px;
     --radius: 8px;
     --shadow: 0 22px 60px rgba(31, 40, 51, 0.09);
@@ -570,7 +570,7 @@
   }
 
   .site-header {
-    background: rgba(19,34,56,0.97);
+    background: rgba(24,36,49,0.96);
     border-bottom: 1px solid rgba(255,255,255,0.12);
     color: #ffffff;
   }
@@ -623,8 +623,8 @@
   .install-pill {
     display: inline-flex;
     width: fit-content;
-    border: 1px solid rgba(37,99,235,0.24);
-    background: rgba(37,99,235,0.08);
+    border: 1px solid rgba(198,95,70,0.28);
+    background: rgba(198,95,70,0.08);
     color: var(--brand-ink);
     border-radius: 999px;
     padding: 8px 13px;
@@ -674,7 +674,7 @@
   .btn-primary {
     background: var(--brand);
     color: #ffffff;
-    box-shadow: 0 18px 44px rgba(37,99,235,0.22);
+    box-shadow: 0 18px 44px rgba(198,95,70,0.25);
   }
 
   .btn-secondary {
@@ -768,7 +768,7 @@
   .install-panel {
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(0, 0.86fr) minmax(320px, 0.74fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 44px;
     text-align: left;
     padding: 38px;
@@ -779,7 +779,7 @@
     position: static;
   }
 
-  .install-panel h3 {
+  .install-panel > div:first-child h3 {
     color: var(--navy);
     font-size: clamp(1.8rem, 3vw, 3rem);
     line-height: 1.08;
@@ -796,7 +796,7 @@
     border-radius: 999px;
     background: var(--brand);
     color: #ffffff;
-    box-shadow: 0 22px 48px rgba(37,99,235,0.24);
+    box-shadow: 0 22px 48px rgba(198,95,70,0.28);
     cursor: grab;
   }
 
@@ -858,6 +858,12 @@
     letter-spacing: 0;
   }
 
+  .install-panel .step-card h3 {
+    margin: 2px 0 8px;
+    font-size: 1.18rem;
+    line-height: 1.35;
+  }
+
   .step-card p,
   .axis-row p,
   .check-item p {
@@ -906,6 +912,10 @@
     border-right: 0;
   }
 
+  .check-item:nth-child(3n) {
+    border-right: 0;
+  }
+
   .check-number {
     display: block;
     color: var(--brand);
@@ -935,7 +945,7 @@
     border-radius: 999px;
     background: var(--brand);
     color: #ffffff;
-    box-shadow: 0 18px 42px rgba(37,99,235,0.22);
+    box-shadow: 0 18px 42px rgba(198,95,70,0.26);
   }
 
   .site-footer {
@@ -1078,21 +1088,21 @@
         </div>
         <div class="steps-grid">
           <article class="step-card reveal">
-            <div class="step-index">①</div>
+            <div class="step-index">1</div>
             <div>
               <h3>북마크 바 표시</h3>
               <p>Chrome 기준 Cmd+Shift+B 또는 Ctrl+Shift+B로 북마크 바 표시</p>
             </div>
           </article>
           <article class="step-card reveal">
-            <div class="step-index">②</div>
+            <div class="step-index">2</div>
             <div>
               <h3>버튼 드래그</h3>
               <p>버튼을 북마크 바로 드래그</p>
             </div>
           </article>
           <article class="step-card reveal">
-            <div class="step-index">③</div>
+            <div class="step-index">3</div>
             <div>
               <h3>교회 홈페이지에서 실행</h3>
               <p>진단할 교회 홈페이지에서 북마클릿 클릭</p>
@@ -1173,6 +1183,21 @@
           <span class="check-number">03</span>
           <h3>새가족 동선</h3>
           <p>처음 방문하는 사람이 "언제, 어디로, 어떻게 가면 되는지" 바로 이해할 수 있는지</p>
+        </article>
+        <article class="check-item reveal">
+          <span class="check-number">04</span>
+          <h3>예배 안내</h3>
+          <p>주일예배·수요예배·교회학교 예배 시간이 검색과 AI가 읽기 쉬운 텍스트로 정리됐는지</p>
+        </article>
+        <article class="check-item reveal">
+          <span class="check-number">05</span>
+          <h3>방문 정보</h3>
+          <p>주소, 지도, 주차, 대중교통, 문의 경로가 첫 방문자에게 충분히 연결되어 있는지</p>
+        </article>
+        <article class="check-item reveal">
+          <span class="check-number">06</span>
+          <h3>모바일 접근성</h3>
+          <p>작은 화면에서도 글자, 버튼, 메뉴, 링크가 읽기 쉽고 이동하기 편한지</p>
         </article>
       </div>
     </div>
