@@ -1927,7 +1927,7 @@
     );
     source = source.replace(
       '<div class="dma-footer"><div class="dma-left-actions"><button data-export>Export</button><button data-copy>Copy</button><button data-refresh>Refresh</button><a class="dma-contact" href="mailto:CS@ONMAM.COM?subject=온맘%20디지털선교%20분석기%20문의">문의하기</a></div><div class="dma-credit">By ONMAM · \'+new Date().toLocaleDateString("ko-KR").replace(/\\. /g,". ").replace(/\\.$/,"")+"</div></div></div>";',
-      '<div class="dma-footer"><div class="dma-left-actions"><button data-pdf>전체를 보고서 파일로 출력</button><button data-site-audit>전체 사이트 진단</button><button data-export>텍스트로 내보내기</button><button data-copy>결과 복사</button><button data-refresh>다시 진단</button><a class="dma-contact" href="mailto:CS@ONMAM.COM?subject=온맘%20디지털선교%20분석기%20문의">문의하기</a></div><div class="dma-credit">By ONMAM · \'+new Date().toLocaleDateString("ko-KR").replace(/\\. /g,". ").replace(/\\.$/,"")+"</div></div></div>";'
+      '<div class="dma-footer"><div class="dma-left-actions"><button data-pdf>전체를 보고서 파일로 출력</button><button data-site-audit>사이트 전체 진단</button><button data-export>텍스트로 내보내기</button><button data-copy>결과 복사</button><button data-refresh>다시 진단</button><a class="dma-contact" href="mailto:CS@ONMAM.COM?subject=온맘%20디지털선교%20분석기%20문의">문의하기</a></div><div class="dma-credit">By ONMAM · \'+new Date().toLocaleDateString("ko-KR").replace(/\\. /g,". ").replace(/\\.$/,"")+"</div></div></div>";'
     );
     source = source.replace(
       `var total=Math.round(model.categories.reduce(function(sum,item){return sum+item.score},0)/Math.max(model.categories.length,1)),root=document.createElement("div");`,
@@ -1951,6 +1951,15 @@
     source = source.replace(
       'root.querySelector("[data-pdf]").addEventListener("click",function(){exportReportPdf()});mount("all")',
       'root.querySelector("[data-pdf]").addEventListener("click",function(){exportReportPdf()});root.querySelector("[data-site-audit]").addEventListener("click",function(){runSiteAudit()});root.querySelector("[data-contact]").addEventListener("click",function(){showContactAlert()});mount("all")'
+    );
+    source = source.replace("Unlighthouse식 페이지 발견 베타", "사이트 전체 페이지 자동 점검");
+    source = source.replace(
+      `+"</div>"+panel("사이트 수집 상태::현재 브라우저에서 접근 가능한 같은 도메인 페이지만 진단합니다"`,
+      `+"</div>"+panel("이 기능은 무엇을 하나요::한 페이지가 아니라 교회 홈페이지 전체 흐름을 봅니다",'<div class="dma-site-audit-help"><p><strong>무엇을 하나요?</strong> 현재 페이지에서 보이는 내부 링크, sitemap.xml, robots.txt를 모아 같은 도메인의 주요 페이지를 자동으로 찾습니다.</p><p><strong>어떤 도움이 되나요?</strong> 메인 페이지만 보지 않고 예배 안내, 새가족, 오시는 길, 설교 같은 핵심 페이지가 함께 준비되어 있는지 비교합니다.</p><p><strong>어떻게 읽으면 되나요?</strong> 점수가 낮은 페이지부터 제목, 설명문, H1, 교회 핵심 정보를 보강하면 전체 홈페이지 품질이 올라갑니다.</p></div>')+panel("사이트 수집 상태::현재 브라우저에서 접근 가능한 같은 도메인 페이지만 진단합니다"`
+    );
+    source = source.replace(
+      "sitemap.xml, robots.txt, 현재 페이지 내부 링크를 모아 같은 도메인 페이지를 빠르게 확인하고 있습니다.",
+      "현재 홈페이지 안의 주요 페이지를 자동으로 찾고 있습니다. sitemap.xml, robots.txt, 내부 링크를 함께 읽어 예배 안내, 새가족, 오시는 길, 설교 페이지까지 전체 흐름을 확인합니다."
     );
     source = source.replace(
       `detail.querySelectorAll("[data-copy-text]").forEach(function(button){button.addEventListener("click",function(){var text=button.getAttribute("data-copy-text")||"";if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(text);else window.prompt("복사",text)})})}`,
@@ -2089,6 +2098,10 @@
       '#"+ROOT_ID+" .dma-summary-head h2,#"+ROOT_ID+" .dma-section-title,#"+ROOT_ID+" .dma-overview-card h4,#"+ROOT_ID+" .dma-detail-panel h3{color:var(--dma-navy)!important;font-weight:700!important;letter-spacing:0!important}',
       '#"+ROOT_ID+" .dma-summary-grid,#"+ROOT_ID+" .dma-summary-grid b,#"+ROOT_ID+" .dma-overview-card p,#"+ROOT_ID+" .dma-stat-title,#"+ROOT_ID+" .dma-stat-sub,#"+ROOT_ID+" .dma-list-row,#"+ROOT_ID+" .dma-check-desc{color:var(--dma-muted)!important}',
       '#"+ROOT_ID+" .dma-summary-grid a,#"+ROOT_ID+" .dma-green,#"+ROOT_ID+" .dma-list-row strong{color:var(--dma-brand)!important}',
+      '#"+ROOT_ID+" #dma-detail .dma-list-row span,#"+ROOT_ID+" #dma-detail .dma-list-row small,#"+ROOT_ID+" #dma-detail p,#"+ROOT_ID+" .dma-site-audit-help{font-weight:650!important}',
+      '#"+ROOT_ID+" .dma-site-audit-help{display:grid!important;gap:10px!important;color:var(--dma-ink)!important;line-height:1.75!important}',
+      '#"+ROOT_ID+" .dma-site-audit-help p{margin:0!important;font-size:15px!important;line-height:1.75!important;color:var(--dma-ink)!important}',
+      '#"+ROOT_ID+" .dma-site-audit-help strong{font-weight:800!important;color:var(--dma-navy)!important}',
       '#"+ROOT_ID+" .dma-summary-links span{border-color:rgba(198,95,70,.28)!important;background:rgba(198,95,70,.08)!important;color:#7b3325!important;border-radius:999px!important}',
       '#"+ROOT_ID+" .dma-cards-grid{gap:16px!important;margin-top:16px!important}',
       '#"+ROOT_ID+" .dma-overview-card{padding:20px!important}',
